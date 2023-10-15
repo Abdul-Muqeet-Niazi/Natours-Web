@@ -1,0 +1,44 @@
+.heading-secondary {
+    font-size: 3.5rem;
+    font-weight: 700;
+    display: inline-block;
+    text-transform: uppercase;
+    // background: linear-gradient(to right, $color-primary-light , $color-primary-dark, .2%);
+    color: #455054;
+    background-clip : text;
+    transition: all .2s;
+    letter-spacing: .2rem;
+    opacity: .8;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, $alpha: 0.2);
+    }
+
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.3rem;
+    }
+
+    @include respond(s-phone) {
+        font-size: 2rem;
+    }
+ 
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}

@@ -1,0 +1,151 @@
+.cards {
+    perspective: 150rem;
+    position: relative;
+    height: 52rem;
+
+    &__side {
+        height: 52rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        overflow: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .15);
+
+        &--front {
+            color: #000000;
+            background-color: #eee;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-color: rgba(255, 166, 0, 0.904);
+            }
+
+            &-2 {
+                background-color: $color-primary-light;
+            }
+
+            &-3 {
+                background-color: $color-tertiary-light;
+            }
+        }
+
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+
+    &__pictures {
+        background-size: cover;
+        height: 23rem;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+            background-image: url(./nat-5.jpg);
+        }
+
+        &--2 {
+            background-image: url(./nat-6.jpg);
+        }
+
+        &--3 {
+            background-image: url(./nat-7.jpg);
+        }
+    }
+
+    &__Heading {
+        font-size: 2.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+        position: absolute;
+        top: 15rem;
+        right: 2rem;
+        width: 60%;
+        text-align: right;
+    }
+
+    &__Heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+
+        &--1 {
+            background-color: rgba($color-secondary-light, $alpha: 0.7);
+        }
+
+        &--2 {
+            background-color: rgba($color-primary-light, $alpha: 0.7);
+        }
+
+        &--3 {
+            background-color: rgba($color-tertiary-light, $alpha: 0.7);
+        }
+    }
+
+    &__Detail {
+        padding: 3rem;
+
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                padding: 1rem;
+                font-size: 1.5rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #c0bfbf;
+                }
+            }
+        }
+
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50% ;
+        left: 50% ;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+    }
+    
+    &__price-box {
+        color: $color-white;
+        margin-bottom: 8rem;
+        text-align: center;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem ;
+        font-weight: 200;
+    }
+}
+
+
+
+
+
+
+
